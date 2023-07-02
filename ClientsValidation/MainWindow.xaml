@@ -1,0 +1,38 @@
+﻿<Window x:Class="ClientsValidation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientsValidation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="ErrorsTextBox"
+                 Grid.Row="0"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 Height="300"
+                 Margin="10"/>
+        <Button x:Name="OpenFile"
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="10"
+                Content="Открыть файл с клиентами"
+                Click="OpenFile_Click"/>
+        <Button x:Name="SaveFile"
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="10"
+                Content="Сохранить файлы"
+                Click="SaveFile_Click"/>
+    </Grid>
+</Window>
